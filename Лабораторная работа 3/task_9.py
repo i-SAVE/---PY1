@@ -7,10 +7,8 @@ money_capital = 0  # количество денег, чтобы прожить 
 
 # TODO Оформить решение
 
-for i in range(1, 11):
-    if i == 1:  # расчет подушки безопаснсти для 1 месяца без повышения расходов
-        money_capital += spend - salary
-    else:
-        money_capital += spend * 1.03 ** (i - 1) - salary  # условие для всех других месяцев
+for i in range(months):
+    money_capital += spend - salary  # кол-во денег необходимое к концу 1 месяца
+    spend += spend * 0.03  # находим ежемесяное увелеечние расходов на 0,03 каждый месяц со 2
 
-print(round(money_capital))
+print(round(money_capital))  # выводим и округляем результат решения

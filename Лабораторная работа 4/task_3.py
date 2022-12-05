@@ -4,7 +4,7 @@ def delete(list_, index=None):
         list_two = list_[:index]  # разделяем с помощью слайсир. на 2
         list_two.extend(list_one)  # складываем значения без удаляемого
         return list_two
-    if index is not None:
+    elif index is not None:
         del list_[index]
         return list_
     else:  # если индекс какое-то значение, то ищем послдений эл-нт
